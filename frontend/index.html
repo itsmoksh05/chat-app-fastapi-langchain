@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chat Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <!-- Header -->
+        <div class="chat-header">
+            <div class="header-left">
+                <div class="avatar">🤖</div>
+                <div class="header-info">
+                    <h1>AI Assistant</h1>
+                    <p>Powered by Groq & Llama | Made by Moksh Patel</p>
+                </div>
+            </div>
+            <button class="new-chat-btn" onclick="startNewConversation()">New Chat</button>
+        </div>
+
+        <!-- Error Message -->
+        <div id="error-message" class="error-message" style="display: none;"></div>
+
+        <!-- Messages -->
+        <div class="chat-messages" id="messages">
+            <div class="welcome-screen">
+                <div class="welcome-icon">🤖</div>
+                <h3>Start a conversation</h3>
+                <p>Ask me anything! I'm here to help.</p>
+            </div>
+        </div>
+
+        <!-- Input -->
+        <div class="chat-input">
+            <div class="input-container">
+                <div class="input-wrapper">
+                    <textarea 
+                        id="messageInput" 
+                        class="message-input" 
+                        placeholder="Type your message..."
+                        rows="1"
+                    ></textarea>
+                </div>
+                <button type="button" class="send-button" id="sendButton" onclick="sendMessage()">
+                    ➤
+                </button>
+            </div>
+            <div class="input-hint">
+                Press Enter to send, Shift+Enter for new line
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
